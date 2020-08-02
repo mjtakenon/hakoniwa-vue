@@ -8,7 +8,6 @@
           v-model="islandName"
           required
           :state="!islandName ? null : isValidIslandName()"
-          placeholder="○○島"
         ></b-form-input
         >島
       </b-form-group>
@@ -65,5 +64,8 @@ input {
   width: 200px;
   display: inline;
   margin-right: 10px;
+}
+h2 {
+  margin: 20px 0px;
 }
 </style>

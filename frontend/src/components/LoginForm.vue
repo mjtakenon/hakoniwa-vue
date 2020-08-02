@@ -1,5 +1,6 @@
 <template>
   <div class="login-form">
+    <h3> 開発画面へ </h3>
     <b-form>
       <b-form-group label="あなたの島の名前は?">
         <b-form-select v-model="selected" :options="islands"> </b-form-select>

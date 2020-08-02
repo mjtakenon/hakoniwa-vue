@@ -24,8 +24,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# images
-resources/img/*.gif
-resources/img/*.png
-resources/img/*.jpg
-resources/img/*.bmp
+# ignore images
+frontend/resources/img/*.gif
