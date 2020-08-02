@@ -1,23 +1,54 @@
 <template>
   <div class="login-form">
-    <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
-      <b-dropdown-item>First Action</b-dropdown-item>
-      <b-dropdown-item>Second Action</b-dropdown-item>
-      <b-dropdown-item>Third Action</b-dropdown-item>
-      <b-dropdown-divider></b-dropdown-divider>
-      <b-dropdown-item active>Active action</b-dropdown-item>
-      <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-    </b-dropdown>
+    <b-form>
+      <b-form-group label="あなたの島の名前は?">
+        <b-form-select v-model="selected" :options="islands"> </b-form-select>
+      </b-form-group>
+      <b-form-group label="パスワードをどうぞ!">
+        <b-form-input
+          v-model="password"
+          required
+          type="password"
+        ></b-form-input>
+      </b-form-group>
+      <b-button @click="onLogin" variant="primary">Submit</b-button>
+    </b-form>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
+import Island from "@/scripts/class";
 
 @Component
 export default class LoginForm extends Vue {
-  @Prop() private msg!: string;
+  private islands: Island[] = [];
+  private selected: number | null = null;
+  private password = "";
+
+  private onLogin() {
+    if (this.selected === null) {
+      return;
+    }
+
+    const data = [this.islands[this.selected], this.password];
+    console.log(data);
+    this.$store.dispatch("login", data);
+  }
+
+  mounted() {
+    this.islands.push(new Island(null, "島名を選択"));
+    this.islands.push(new Island(1, "ほげ島"));
+    this.islands.push(new Island(2, "ふが島"));
+  }
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+input,
+select {
+  width: 200px;
+  display: inline;
+  margin-right: 10px;
+}
+</style>

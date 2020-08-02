@@ -5,7 +5,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {},
+  // 同期処理
   mutations: {},
-  actions: {},
+  // 非同期処理
+  actions: {
+    async register(payload) {
+      console.log("register", payload);
+    },
+    async login(payload) {
+      console.log("login", payload);
+    }
+  },
   modules: {}
 });

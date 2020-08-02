@@ -1,6 +1,6 @@
 <template>
   <div class="register">
-    <RegisterForm msg="message"></RegisterForm>
+    <RegisterForm />
   </div>
 </template>
 
