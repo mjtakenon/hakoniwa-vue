@@ -23,3 +23,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# images
+resources/img/*.gif
+resources/img/*.png
+resources/img/*.jpg
+resources/img/*.bmp
