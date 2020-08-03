@@ -7,9 +7,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component
-export default class IslandList extends Vue {
-}
+export default class IslandList extends Vue {}
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

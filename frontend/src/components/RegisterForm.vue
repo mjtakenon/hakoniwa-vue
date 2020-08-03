@@ -62,7 +62,7 @@ export default class RegisterForm extends Vue {
 <style scoped lang="scss">
 input {
   width: 200px;
-  display: inline;
+  display: inline-block;
   margin-right: 10px;
 }
 h2 {

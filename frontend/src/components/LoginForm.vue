@@ -1,6 +1,6 @@
 <template>
   <div class="login-form">
-    <h3> 開発画面へ </h3>
+    <h3>開発画面へ</h3>
     <b-form>
       <b-form-group label="あなたの島の名前は?">
         <b-form-select v-model="selected" :options="islands"> </b-form-select>
@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Island from "@/scripts/class";
+import Island from "../scripts/Island";
 
 @Component
 export default class LoginForm extends Vue {
@@ -49,7 +49,7 @@ export default class LoginForm extends Vue {
 input,
 select {
   width: 200px;
-  display: inline;
+  display: inline-block;
   margin-right: 10px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="island-view">
-    <div> island-view </div>
+    <div>island-view</div>
   </div>
 </template>
 
@@ -12,5 +12,4 @@ export default class IslandView extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

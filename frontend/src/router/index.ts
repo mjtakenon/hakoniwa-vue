@@ -22,8 +22,7 @@ const routes: Array<RouteConfig> = [
   {
     path: "/develop",
     name: "Develop",
-    component: () =>
-      import("../views/Develop.vue")
+    component: () => import("../views/Develop.vue")
   }
 ];
 

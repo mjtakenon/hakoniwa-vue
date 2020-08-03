@@ -13,5 +13,4 @@ export default class Info extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
