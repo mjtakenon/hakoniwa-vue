@@ -1,6 +1,5 @@
 <template>
   <div class="develop">
-    <h2>{{ IslandView.name }} 開発画面</h2>
     <IslandView />
     <hr />
     <LogView />
