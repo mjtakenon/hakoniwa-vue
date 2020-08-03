@@ -25,4 +25,4 @@ pnpm-debug.log*
 *.sw?
 
 # ignore images
-frontend/src/resources/img/*.gif
+frontend/public/resources/img/*.gif
