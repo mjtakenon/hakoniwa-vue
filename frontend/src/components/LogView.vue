@@ -1,6 +1,6 @@
 <template>
   <div class="log-view">
-    <div>最近の記録</div>
+    <h3>最近の記録</h3>
   </div>
 </template>
 
