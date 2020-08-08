@@ -4,7 +4,7 @@
     <hr />
     <div class="develop" style="display: flex; flex-wrap:wrap">
       <IslandView class="view" />
-      <CommandView class="view" />
+      <PlanView class="view" />
     </div>
     <hr />
     <LogView />
@@ -14,14 +14,14 @@
 <script>
 import IslandView from "@/components/IslandView.vue";
 import LogView from "@/components/LogView.vue";
-import CommandView from "@/components/CommandView.vue";
+import PlanView from "@/components/PlanView.vue";
 
 export default {
   name: "Develop",
   components: {
     IslandView,
     LogView,
-    CommandView
+    PlanView
   }
 };
 </script>
