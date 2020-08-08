@@ -20,7 +20,7 @@
   padding: 30px;
   color: #2c3e50;
   background-color: azure;
-  height: 100vh;
+  // height: 100vh;
 }
 
 #nav {

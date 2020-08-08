@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h2>{{ islandName }} 開発計画</h2>
+    <h2 class="center">{{ islandName }} 開発計画</h2>
     <hr />
     <StatusView />
+    <hr />
     <div class="develop" style="display: flex; flex-wrap:wrap">
-      <IslandView class="view" />
-      <PlanView class="view" />
+      <IslandView class="island" />
+      <PlanView class="plan" />
     </div>
     <hr />
     <LogView />
@@ -31,10 +32,18 @@ export default {
 
 <style scoped lang="scss">
 .develop {
+  min-width: 500px;
   margin: auto;
-  width: 80%;
+  // width: 80%;
 }
-.view {
-  margin: 0px 10px;
+.island {
+  min-width: 410px;
+  padding: 0px 4px;
+  margin: 4px auto;
+}
+.plan {
+  flex-basis: 25%;
+  padding: 0px 4px;
+  margin: 4px;
 }
 </style>
