@@ -2,6 +2,7 @@
   <div>
     <h2>{{ islandName }} 開発計画</h2>
     <hr />
+    <StatusView />
     <div class="develop" style="display: flex; flex-wrap:wrap">
       <IslandView class="view" />
       <PlanView class="view" />
@@ -12,18 +13,20 @@
 </template>
 
 <script>
-import IslandView from "@/components/IslandView.vue";
-import LogView from "@/components/LogView.vue";
-import PlanView from "@/components/PlanView.vue";
+import StatusView from "@/components/StatusView.vue"
+import IslandView from "@/components/IslandView.vue"
+import LogView from "@/components/LogView.vue"
+import PlanView from "@/components/PlanView.vue"
 
 export default {
   name: "Develop",
   components: {
+    StatusView,
     IslandView,
     LogView,
-    PlanView
-  }
-};
+    PlanView,
+  },
+}
 </script>
 
 <style scoped lang="scss">

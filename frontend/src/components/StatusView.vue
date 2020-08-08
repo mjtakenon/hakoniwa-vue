@@ -1,13 +1,14 @@
 <template>
-  <div class="island-list">
-    <h3>各島の状況</h3>
+  <div class="status-view">
+    status
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
+
 @Component
-export default class IslandList extends Vue {}
+export default class StatusView extends Vue {}
 </script>
 
 <style scoped lang="scss"></style>

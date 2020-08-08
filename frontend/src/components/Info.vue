@@ -6,10 +6,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator"
 @Component
 export default class Info extends Vue {
-  private turn = 0;
+  private turn = 0
 }
 </script>
 

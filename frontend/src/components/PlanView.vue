@@ -3,7 +3,7 @@
     <div v-if="plans !== null">
       <div v-for="(plan, idx) in plans" :key="idx">
         <span>
-          {{ idx }} :
+          {{ ("00" + (idx + 1)).slice(-2) }}:
           <span v-if="plan.position !== null">
             ({{ plan.position.x }},{{ plan.position.y }})
           </span>
@@ -15,17 +15,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Plan from "../scripts/Plan";
+import { Component, Vue } from "vue-property-decorator"
+import Plan from "../scripts/Plan"
 
 @Component
 export default class PlanView extends Vue {
-  private plans: Plan[] | null = null;
+  private plans: Plan[] | null = null
 
   mounted() {
-    this.plans = [];
+    this.plans = []
     for (let n = 0; n < 30; n++) {
-      this.plans[n] = new Plan({x:1,y:5}, "資金繰り");
+      this.plans[n] = new Plan(null, "資金繰り")
     }
   }
 }

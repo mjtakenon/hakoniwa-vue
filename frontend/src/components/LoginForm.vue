@@ -18,29 +18,29 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Island from "../scripts/Island";
+import { Component, Vue } from "vue-property-decorator"
+import Island from "../scripts/Island"
 
 @Component
 export default class LoginForm extends Vue {
-  private islands: Island[] = [];
-  private selected: number | null = null;
-  private password = "";
+  private islands: Island[] = []
+  private selected: number | null = null
+  private password = ""
 
   private onLogin() {
     if (this.selected === null) {
-      return;
+      return
     }
 
-    const data = [this.islands[this.selected], this.password];
-    console.log(data);
-    this.$store.dispatch("login", data);
+    const data = [this.islands[this.selected], this.password]
+    console.log(data)
+    this.$store.dispatch("login", data)
   }
 
   mounted() {
-    this.islands.push(new Island(null, "島名を選択"));
-    this.islands.push(new Island(1, "ほげ島"));
-    this.islands.push(new Island(2, "ふが島"));
+    this.islands.push(new Island(null, "島名を選択"))
+    this.islands.push(new Island(1, "ほげ島"))
+    this.islands.push(new Island(2, "ふが島"))
   }
 }
 </script>

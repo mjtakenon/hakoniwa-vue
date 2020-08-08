@@ -21,24 +21,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Tile from "../scripts/Tile";
+import { Component, Vue } from "vue-property-decorator"
+import Tile from "../scripts/Tile"
 
 @Component
 export default class IslandView extends Vue {
-  private islandName = "ほげ島";
-  private islandTiles: Tile[][] | null = null;
+  private islandName = "ほげ島"
+  private islandTiles: Tile[][] | null = null
 
   private onClickTile(y: number, x: number) {
-    console.log(x, y);
+    console.log(x, y)
   }
 
   mounted() {
-    this.islandTiles = [];
+    this.islandTiles = []
     for (let y = 0; y < 12; y++) {
-      this.islandTiles[y] = [];
+      this.islandTiles[y] = []
       for (let x = 0; x < 12; x++) {
-        this.islandTiles[y][x] = new Tile();
+        this.islandTiles[y][x] = new Tile()
       }
     }
   }

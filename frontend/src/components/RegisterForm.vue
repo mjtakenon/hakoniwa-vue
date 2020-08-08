@@ -39,22 +39,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator"
 
 @Component
 export default class RegisterForm extends Vue {
-  private islandName = "";
-  private ownerName = "";
-  private password = "";
-  private passwordAgain = "";
+  private islandName = ""
+  private ownerName = ""
+  private password = ""
+  private passwordAgain = ""
 
   private onRegister() {
-    const data = [this.islandName, this.ownerName, this.password];
-    this.$store.dispatch("register", data);
+    const data = [this.islandName, this.ownerName, this.password]
+    this.$store.dispatch("register", data)
   }
 
   private isValidIslandName() {
-    return true;
+    return true
   }
 }
 </script>
