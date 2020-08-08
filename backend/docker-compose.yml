@@ -1,8 +1,12 @@
 version: '3'
 services:
-  nginx:
-    build: .
+  go:
+    image: golang
     ports:
-      - "8080:80"
+      - "${SERVER_PORT}:1323"
     volumes:
-      - ./public:/usr/share/nginx/html
+      - ./go:/app/
+    tty: true
+    command: /app/server_start
+    env_file: .env
+    
