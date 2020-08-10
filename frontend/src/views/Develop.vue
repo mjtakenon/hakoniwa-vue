@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2 class="center">{{ islandName }} 開発計画</h2>
-    <hr />
     <StatusView />
     <hr />
     <div class="develop" style="display: flex; flex-wrap:wrap">

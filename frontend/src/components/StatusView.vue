@@ -1,13 +1,14 @@
 <template>
   <div class="status-view">
-    <table border="1" v-if="status!==null">
+    <!-- <table border="1" v-if="status!==null">
       <tr>
         <th> 人口 </th> <th> 食料 </th> <th> 資金 </th> <th> 面積 </th>
       </tr>
       <tr>
         <td> {{ status.population }} 人 </td> <td> {{ status.foods }} 万㌧ </td> <td> {{ status.money }} 億円 </td> <td> {{ status.area }} 万坪 </td>
       </tr>
-    </table>
+    </table> -->
+    <b-table v-if="status!==null" striped hover :items="[status.getAll()]"></b-table>
   </div>
 </template>
 
